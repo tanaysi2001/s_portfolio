@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-attachment: fixed;/*newone*/
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+header {
+  background: rgba(15, 32, 39, 0.85);
+  backdrop-filter: blur(20px);/*newone*/
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;/*newone*/
+}
+header h1 {
+  color: #d5d3d3;
+}
+header h1:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 5px;
+}
+header a {
+  text-decoration: none;
+}
+body::before {
+  content: "";
+  display: block;
+  height: 80px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+.nav-links a:hover {
+  color: #f7c948;
+}
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("images/postOffice.jpg")
+      no-repeat center center/cover;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+.hero h2 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  scroll-margin-top: 100px; /*edited*/
+}
+
+.section p {
+  color: #bdbabad9;
+}
+
+/* .anchor-section::before {
+        content: "";
+        display: block;
+        height: 100px; equal to or slightly more than your header height */
+/* margin-top: -100px;
+        visibility: hidden;
+      } */
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.about-flex {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 40px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.aboutSection {
+  display: flex; /* edited and made this section as flex */
+  gap: 10px;
+  flex-direction: column;
+  padding-left: 20px;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.aboutSection h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #d5d3d3;
+}
+.aboutSection p {
+  color: #bdbabad9;
+}
+
+.about-flex img {
+  width: 240px;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+  /* padding-left: 50px; */
+}
+
+.educationSection {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+.section h1 {
+  font-size: 2rem;
+}
+/* .section h2{
+        color:#05080c;
+      } */
+
+.careerSection {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+.contactSection {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+.journey {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+.journey-card {
+  background: #1b2a33;
+  padding: 20px;
+  border-left: 6px solid #f7c948;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  flex: 1; /*note*/
+  min-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /*edited*/
+  gap: 10px; /*edited*/
+}
+.journey-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.skill {
+  background: linear-gradient(145deg, #233c47, #2e4d59);
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* color: #f7c948; */
+  color: #af7f27;
+  transition: transform 0.3s ease;
+  align-items: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.skill:hover {
+  transform: scale(1.08);
+  background: #f7c948;
+  color: #1b262c;
+}
+.contact {
+  text-align: center;
+  background: #1c2d35;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+footer {
+  background: #0f2027;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .about-flex,
+  .journey {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-flex img {
+    margin-bottom: 20px;
+  }
+}
+#officer-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: left;
+  /* border: 4px solid #fff; Optional: adds white border */
+  box-shadow: 0 0 20px rgba(180, 172, 172, 0.574); /* Optional: adds subtle shadow */
+}
+#officer-photo:hover {
+  transform: scale(1.02);
+}
+
+.contactBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 5px 0;
+  text-align: left;
+}
+
+.contactBox .icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 20px;
+}
+.contactBox a {
+  color: rgb(165, 161, 161);
+}
+.contactBox a:hover {
+  color: rgb(25, 71, 235);
+  transform: scale(1.02);
+}
+.contactBox img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 24px rgba(60, 113, 122, 0.972);
+}
+
+.journey-card p {
+  font-size: 0.9rem;
+}
+
+.journey-card h2 {
+  /* color: #87CEEB; */
+  /* color: #FFD700; */
+  color: #af7f27;
+  text-shadow: 0px 0px 2px;
+}
+
+.journey-card a {
+  color: rgb(184, 180, 180);
+}
+.journey-card a:hover {
+  color: rgb(25, 71, 235);
+  transform: scale(1.02);
+}
+
+.contactSection h1 {
+  color: #af7f27;
+  text-shadow: 0px 0px 2px;
+}
+.navContainer{
+  display:flex;
+}
+@media screen and (max-width: 760px) {
+  .navContainer{
+    display:none;
+  }
+  
+}
